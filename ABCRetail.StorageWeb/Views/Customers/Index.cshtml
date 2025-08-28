@@ -1,0 +1,20 @@
+@model IEnumerable<ABCRetail.StorageWeb.Models.CustomerProfile>
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Customers (Azure Table Storage)</h2>
+<p><a href="/Customers/Create">+ Add Customer</a></p>
+<table>
+    <thead><tr><th>Name</th><th>Email</th><th>Address</th></tr></thead>
+    <tbody>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.FullName</td>
+            <td>@c.Email</td>
+            <td>@c.Address</td>
+        </tr>
+    }
+    </tbody>
+</table>

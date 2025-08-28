@@ -1,0 +1,16 @@
+@model IEnumerable<string>
+@{
+    ViewBag.Title = "Files";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Contracts (Azure File Share)</h2>
+<form method="post" enctype="multipart/form-data" action="/Files/Upload">
+    <input type="file" name="file" />
+    <button type="submit">Upload Contract</button>
+</form>
+<ul>
+@foreach (var f in Model)
+{
+    <li>@f - <a href="/Files/Download?name=@f">Download</a></li>
+}
+</ul>

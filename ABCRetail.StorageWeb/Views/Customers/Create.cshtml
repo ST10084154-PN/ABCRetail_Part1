@@ -1,0 +1,12 @@
+@model ABCRetail.StorageWeb.Models.CustomerProfile
+@{
+    ViewBag.Title = "Create Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create Customer</h2>
+<form method="post">
+    <label>Full Name</label><input name="FullName" required/>
+    <label>Email</label><input name="Email" type="email" required/>
+    <label>Address</label><input name="Address" required/>
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,36 @@
+@{
+    Layout = null;
+    var title = ViewBag.Title ?? "ABC Retail Storage Demo";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@title</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <h1>ABC Retail – Azure Storage Demo</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/Customers">Customers (Tables)</a>
+            <a href="/Products">Products (Tables)</a>
+            <a href="/Blobs">Images (Blobs)</a>
+            <a href="/Queues">Orders (Queue)</a>
+            <a href="/Files">Contracts (File Share)</a>
+        </nav>
+    </header>
+    <main>
+        @if (TempData["msg"] != null)
+        {
+            <div class="msg">@TempData["msg"]</div>
+        }
+        @RenderBody()
+    </main>
+    <footer>
+        <small>CLDV6212 · POE Part 1</small>
+    </footer>
+</body>
+</html>

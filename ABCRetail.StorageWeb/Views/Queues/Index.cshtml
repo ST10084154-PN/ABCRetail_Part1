@@ -1,0 +1,13 @@
+@model IEnumerable<string>
+@{
+    ViewBag.Title = "Queues";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Orders & Events (Azure Queue Storage)</h2>
+<p>Peeking up to 16 messages:</p>
+<ol>
+@foreach (var m in Model)
+{
+    <li><code>@m</code></li>
+}
+</ol>

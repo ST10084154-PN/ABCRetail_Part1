@@ -1,0 +1,20 @@
+@model IEnumerable<string>
+@{
+    ViewBag.Title = "Blobs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Product Images (Azure Blob Storage)</h2>
+<form method="post" enctype="multipart/form-data" action="/Blobs/Upload">
+    <input type="file" name="file" />
+    <button type="submit">Upload Image</button>
+</form>
+<ul>
+@foreach (var name in Model)
+{
+    <li>
+        <img src="@($"/{ViewBag.Container}/{name}")" alt="@name" onerror="this.onerror=null;this.src='';"/>
+        @name
+    </li>
+}
+</ul>
+<p><em>Note:</em> Images are served from the blob container set to public access.</p>

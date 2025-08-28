@@ -1,0 +1,12 @@
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <h2>Welcome</h2>
+    <p>This web app demonstrates Azure Tables, Blobs, Queues, and File Shares.</p>
+    <form method="post" action="/Home/Seed">
+        <button type="submit">Seed 5 Customers & 5 Products + Queue Message</button>
+    </form>
+    <p>Use the navigation to test each storage service.</p>
+</section>

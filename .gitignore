@@ -1,0 +1,24 @@
+# Ignore Visual Studio temporary files, build results, and caches
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+# Build results
+bin/
+obj/
+# User-specific
+*.user
+*.suo
+# VS Code
+.vscode/
+# Dotnet artifacts
+*.nupkg
+*.snupkg
+# Logs
+*.log
+# OS
+.DS_Store
+Thumbs.db
+# Publish
+ABCRetail.StorageWeb/Properties/PublishProfiles/*
